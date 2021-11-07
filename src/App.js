@@ -1,15 +1,15 @@
 
 import './App.css';
-import About from './Components/About';
+// import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  // Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   // Link
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light') 
@@ -42,15 +42,15 @@ function App() {
           </Route>
       </Routes>
     </Router> */}
-
+  <Navbar title='Text utils' mode={mode} toggledarkmode={togglecolormode} />
+  <TextForm heading="Welcome to Text Utils" mode={mode} />
   {/* New method */}
-    <Router>
-      <Navbar title='Text utils' mode={mode} toggledarkmode={togglecolormode} />
+    {/* <Router>
         <Routes>
           <Route exact path="/" element={<TextForm heading="Welcome to Text Utils" mode={mode} />} />
           <Route exact path="/about" element={<About mode={mode}/>} />
         </Routes>
-    </Router>
+    </Router> */}
 
     </>
   );
