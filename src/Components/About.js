@@ -1,38 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function About() {
-    const [mystyle, setTheme] = useState({
-        color: "black",
-        backgroundColor: "white",
-    });
-    const [darkMode, setDarkMode] = useState('Enable Dark Mode')
+export default function About(props) {
 
-    function toggledarkmode() {
-        if (mystyle.color === "black") {
-            setTheme({
-                color: "white",
-                backgroundColor: "black",
-            });
-            setDarkMode('Enable light mode')
-        } 
-        else {
-            setTheme({
-                color: "black",
-                backgroundColor: "white",
-            });
-            setDarkMode('Enable Dark mode')
-
-        }
-    }
 
     return (
         <>
-            <div style={mystyle}>
-                <div className="container" style={mystyle}>
+            <div style={{backgroundColor: props.mode==='light'?'white':'#4a4a4a',color: props.mode==='light'?'black':'white'}}>
+                <div className="container" >
                     <h1>About Us</h1>
-                    <div className="accordion" id="accordionExample">
+                    <div className="accordion" id="accordionExample" style={{backgroundColor: props.mode==='light'?'white':'#4a4a4a'}}>
                         <div className="accordion-item">
-                            <h2 className="accordion-header" id="headingOne">
+                            <h2 className="accordion-header" id="headingOne" >
                                 <button
                                     className="accordion-button"
                                     type="button"
@@ -40,9 +18,10 @@ export default function About() {
                                     data-bs-target="#collapseOne"
                                     aria-expanded="true"
                                     aria-controls="collapseOne"
-                                    style={mystyle}
+                                    style={{backgroundColor: props.mode==='light'?'white':'#b0988de3'}}
+                                    
                                 >
-                                    Accordion Item #1
+                                    About me
                                 </button>
                             </h2>
                             <div
@@ -50,9 +29,9 @@ export default function About() {
                                 className="accordion-collapse collapse show"
                                 aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample"
-                                style={mystyle}
+                                
                             >
-                                <div className="accordion-body" style={mystyle}>
+                                <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#54423ae3'}} >
                                     <strong>This is the first item's accordion body.</strong> It
                                     is shown by default, until the collapse plugin adds the
                                     appropriate classes that we use to style each element. These
@@ -74,9 +53,9 @@ export default function About() {
                                     data-bs-target="#collapseTwo"
                                     aria-expanded="false"
                                     aria-controls="collapseTwo"
-                                    style={mystyle}
+                                    style={{backgroundColor: props.mode==='light'?'white':'#b0988de3'}}
                                 >
-                                    Accordion Item #2
+                                    About my Skills
                                 </button>
                             </h2>
                             <div
@@ -84,9 +63,9 @@ export default function About() {
                                 className="accordion-collapse collapse"
                                 aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample"
-                                style={mystyle}
+                                
                             >
-                                <div className="accordion-body" style={mystyle}>
+                                <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#54423ae3'}} >
                                     <strong>This is the second item's accordion body.</strong> It
                                     is hidden by default, until the collapse plugin adds the
                                     appropriate classes that we use to style each element. These
@@ -108,9 +87,9 @@ export default function About() {
                                     data-bs-target="#collapseThree"
                                     aria-expanded="false"
                                     aria-controls="collapseThree"
-                                    style={mystyle}
+                                    style={{backgroundColor: props.mode==='light'?'white':'#b0988de3'}}
                                 >
-                                    Accordion Item #3
+                                    About my work
                                 </button>
                             </h2>
                             <div
@@ -118,9 +97,9 @@ export default function About() {
                                 className="accordion-collapse collapse"
                                 aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample"
-                                style={mystyle}
+                                
                             >
-                                <div className="accordion-body" style={mystyle}>
+                                <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#54423ae3'}}>
                                     <strong>This is the third item's accordion body.</strong> It
                                     is hidden by default, until the collapse plugin adds the
                                     appropriate classes that we use to style each element. These
@@ -134,15 +113,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-3">
-                        <button
-                            type="button"
-                            class="btn btn-primary"
-                            onClick={toggledarkmode}
-                        >
-                            {darkMode}
-                        </button>
-                    </div>
+              
                 </div>
             </div>
         </>
