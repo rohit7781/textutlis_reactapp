@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/textutlis_reactapp/static/css/main.a617e044.chunk.css",
-    "main.js": "/textutlis_reactapp/static/js/main.d1d4ef17.chunk.js",
-    "main.js.map": "/textutlis_reactapp/static/js/main.d1d4ef17.chunk.js.map",
+    "main.js": "/textutlis_reactapp/static/js/main.4a3d35e4.chunk.js",
+    "main.js.map": "/textutlis_reactapp/static/js/main.4a3d35e4.chunk.js.map",
     "runtime-main.js": "/textutlis_reactapp/static/js/runtime-main.666de72e.js",
     "runtime-main.js.map": "/textutlis_reactapp/static/js/runtime-main.666de72e.js.map",
     "static/js/2.b3fcf809.chunk.js": "/textutlis_reactapp/static/js/2.b3fcf809.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.666de72e.js",
     "static/js/2.b3fcf809.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.d1d4ef17.chunk.js"
+    "static/js/main.4a3d35e4.chunk.js"
   ]
 }
